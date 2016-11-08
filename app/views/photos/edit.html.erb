@@ -46,14 +46,8 @@
         <input type="text" id="location" name="location" placeholder="Location" class="form-control" value="<%= @photo.location %>">
       </div>
 
-      <!-- Label and input for owner_id -->
-      <div class="form-group">
-        <label for="owner_id" class="control-label">
-          Owner
-        </label>
-
-        <%= select_tag(:owner_id, options_from_collection_for_select(User.all, :id, :email, @photo.owner_id), :class => "form-control") %>
-      </div>
+      
+      
 
       <button class="btn btn-warning">
         Update Photo
