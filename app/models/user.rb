@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   # Validations
 
+  validates :bio, :length => { :maximum => 150 }
+
   validates :username, :uniqueness => true
 
   validates :username, :presence => true
