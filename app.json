@@ -1,0 +1,1 @@
+{"name":"Debug issue 279","repository":"https://github.com/initialversion/debug_issue_279","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
