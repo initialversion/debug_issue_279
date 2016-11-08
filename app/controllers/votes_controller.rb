@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  before_action :current_user_must_be_vote_user, :only => [:edit, :update, :destroy]
+  before_action :current_user_must_be_vote_user, :only => [:show, :edit, :update, :destroy]
 
   def current_user_must_be_vote_user
     vote = Vote.find(params[:id])
