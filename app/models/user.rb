@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   # Validations
 
+  validates :username, :length => { :minimum => 30 }
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
