@@ -21,7 +21,7 @@
         <td><%= photo.caption %></td>
         <td><%= photo.image %></td>
         <td><%= photo.location %></td>
-        <td><%= photo.owner_id %></td>
+        <td><%= photo.owner.email %></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
           <a href="/photos/<%= photo.id %>/edit" class="btn btn-warning">Edit</a>
