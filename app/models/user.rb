@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   # Validations
 
+  validates :username, :presence => true
+
   validates :username, :length => { :minimum => 30 }
 
   # Include default devise modules. Others available are:
