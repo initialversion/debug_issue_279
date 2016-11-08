@@ -10,7 +10,7 @@ class VotesController < ApplicationController
   end
 
   def index
-    @votes = Vote.all
+    @votes = current_user.likes.page(params[:page])
 
     render("votes/index.html.erb")
   end
