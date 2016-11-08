@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    @photos = current_user.photos.page(params[:page])
 
     render("photos/index.html.erb")
   end
