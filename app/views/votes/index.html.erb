@@ -20,8 +20,11 @@
         <td><%= vote.photo.caption %></td>
         <td>
           <a href="/votes/<%= vote.id %>" class="btn btn-primary">Show</a>
-          <a href="/votes/<%= vote.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_vote/<%= vote.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          
+          <% if current_user == vote.user %>
+            <a href="/votes/<%= vote.id %>/edit" class="btn btn-warning">Edit</a>
+            <a href="/delete_vote/<%= vote.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% end %>
         </td>
       </tr>
       <% end %>
